@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Card from './components/card/Card';
 
 function App() {
+  const items = [
+    { name:"shohid", description: 'shohid minar picture', img: "https://thefinancialexpress.com.bd/public/uploads/1582387861.jpg" },
+    { name: 'shohid', description: 'shohid minar picture', img: "https://thefinancialexpress.com.bd/public/uploads/1582387861.jpg" },
+    { name: 'shohid', description: 'shohid minar picture', img: "https://thefinancialexpress.com.bd/public/uploads/1582387861.jpg" },
+    { name: 'shohid', description: 'shohid minar picture', img: "https://thefinancialexpress.com.bd/public/uploads/1582387861.jpg" },
+    { name: 'shohid', description: 'shohid minar picture', img: "https://thefinancialexpress.com.bd/public/uploads/1582387861.jpg" },
+    { name: 'shohid', description: 'shohid minar picture', img: "https://thefinancialexpress.com.bd/public/uploads/1582387861.jpg" },
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+       {
+         items.map(item => <Card
+         item={item}
+         ></Card> )
+       }
+      </div>
     </div>
   );
 }
 
-export default App;
+      export default App;
